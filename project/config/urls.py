@@ -20,6 +20,7 @@ from .views import saludo
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('saludo/',saludo),
-    path("core/", include("core.urls"))
+    #path('saludo/',saludo),
+    path("", include("core.urls")),
+    path("clientes/", include("cliente.urls")),
 ]
