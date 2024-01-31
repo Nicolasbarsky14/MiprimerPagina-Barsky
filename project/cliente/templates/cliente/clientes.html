@@ -1,12 +1,12 @@
-{% extends "core/base.html" %}
+{% extends "core/inicio.html" %}
 
 {% block content %}
     <div class="container">
         <h1>Listado de Clientes</h1>
         
         <div class="button-container">
-            <a href="{% url 'blog:clientes_list' %}" class="btn btn-primary">Listar Clientes</a>
-            <a href="{% url 'blog:clientes_add' %}" class="btn btn-success">Agregar Nuevo Cliente</a>
+            <a href="{% url 'cliente:clientes_list' %}" class="btn btn-primary">Listar Clientes</a>
+            <a href="{% url 'cliente:clientes_add' %}" class="btn btn-success">Agregar Nuevo Cliente</a>
             <a href="{% url 'core:index' %}" class="btn btn-secondary">Ir a Página Inicial</a>
         </div>
     </div>

@@ -1,0 +1,15 @@
+{% extends "core/inicio.html" %}
+ 
+ {% block title %}
+        Pagina Inicial 
+ {% endblock title %}
+ 
+ {% block content %}
+
+    <h2>Pagina Inicial</h2>
+    <button> <a href="{% url 'cliente:index' %}">Publicaciones </a> </button> 
+    <button> <a href="{% url 'cliente:clientes'%}">Clientes</a></button>
+    <button> <a href="{% url 'cliente:comentarios' %}">Comentarios </a> </button>  
+    <button> <a href="{% url 'admin:index' %}"> Administracion </a> </button> 
+ 
+ {% endblock content %}

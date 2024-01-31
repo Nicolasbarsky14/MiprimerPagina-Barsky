@@ -1,4 +1,4 @@
-{% extends "core/base.html" %}
+{% extends "core/inicio.html" %}
 
 {% block content %}
     <div class="comment-add-container">
@@ -10,6 +10,6 @@
             <button type="submit" class="btn btn-success">Agregar</button>
         </form>
 
-        <a href="{% url 'core:index' %}" class="btn btn-secondary mt-2">Ir a Página Principal</a>
+        <a href="{% url 'core:index' %}" class="btn btn-secondary mt-2">Ir a Página Inicial</a>
     </div>
 {% endblock content %}
