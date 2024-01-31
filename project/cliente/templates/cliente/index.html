@@ -1,24 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coderhouse</title>
-</head>
-<body>
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h1>Publicaciones</h1>
     
-    <h1>Cliente</h1>
-    <p>{{clientes}}</p>
+    <button> <a href="{% url 'cliente:publicacion_list' %}"> Listar Publicaciones </a> </button> 
+    <button> <a href="{% url 'cliente:publicacion_add' %}"> Agregar Nueva Publicacion </a> </button> 
+    <button> <a href="{% url 'core:index' %}"> Ir a Pagina Inicial </a> </button> 
 
-    <ul>
-        {% for cliente in clientes %}
-            <li>{{cliente.apellido}} {{cliente.nombre}}</li>
-        {% endfor %}
-    </ul>
-
-    <button><a href= "{% url 'core:index' %}"> Inicio </a></button>
-    <button><a href="{% url 'admin:index' %}">Administracion</a></button>
-
-
-</body>
-</html>
+{% endblock content %}

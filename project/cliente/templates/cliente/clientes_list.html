@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    
+   <h2>Lista de Clientes</h2>
+
+   <table border="1">
+    <thead>
+        <th> Nombre </th>
+        <th>Apellido</th>
+    </thead>
+    <tbody>
+        {% for cliente in Cliente %}
+            <tr>
+                <td> {{  cliente.nombre }} </td>
+                <td> {{ cliente.apellido }} </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+   </table>
+   
+    <button> <a href="{% url 'core:index' %}"> Ir a Pagina Inicial </a> </button> 
+
+{% endblock content %}

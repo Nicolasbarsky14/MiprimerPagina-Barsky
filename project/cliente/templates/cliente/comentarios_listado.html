@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <div class="comment-list">
+        <h2>Lista de Comentarios</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Publicacion</th>
+                    <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comentario in comentarios %}
+                    <tr>
+                        <td>{{ comentario.cliente }}</td>
+                        <td>{{ comentario.publicacion }}</td>
+                        <td>{{ comentario.contenido }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'core:index' %}" class="btn btn-secondary">Ir a Página Inicial</a>
+    </div>
+{% endblock content %}

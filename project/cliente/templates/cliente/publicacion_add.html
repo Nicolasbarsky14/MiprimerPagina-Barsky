@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <div class="add-container">
+        <h2>Agregar Publicación</h2>
+
+        <form method="Publicacion" class="add-form">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-success">Agregar</button>
+        </form>
+
+        <a href="{% url 'core:index' %}" class="btn btn-secondary mt-2">Ir a Pagina Inicial</a>
+    </div>
+{% endblock content %}

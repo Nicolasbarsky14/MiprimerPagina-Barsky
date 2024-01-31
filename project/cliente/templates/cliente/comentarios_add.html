@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <div class="comment-add-container">
+        <h2>Agregar un Comentario</h2>
+
+        <form method="post" class="comment-form">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-success">Agregar</button>
+        </form>
+
+        <a href="{% url 'core:index' %}" class="btn btn-secondary mt-2">Ir a Página Principal</a>
+    </div>
+{% endblock content %}

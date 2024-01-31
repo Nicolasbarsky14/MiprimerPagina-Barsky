@@ -1,0 +1,8 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h1>Comentarios</h1>
+    <a href="{% url 'blog:comentarios_listado' %}" class="btn btn-primary">Listar</a>
+    <a href="{% url 'blog:comentarios_add' %}" class="btn btn-success">Agregar</a>
+    <a href="{% url 'core:index' %}" class="btn btn-secondary">Inicial</a>
+{% endblock content %}

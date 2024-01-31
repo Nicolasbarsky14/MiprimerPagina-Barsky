@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <div class="publicaciones-lista-container">
+        <h2>Lista de Publicaciones</h2>
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Autor</th>
+                    <th>Título</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for publicacion in publicaciones %}
+                    <tr>
+                        <td>{{ publicacion.cliente }}</td>
+                        <td>{{ publicacion.titulo }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <a href="{% url 'core:index' %}" class="btn btn-secondary mt-2">Ir a Página Principal</a>
+    </div>
+{% endblock content %}
