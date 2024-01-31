@@ -9,6 +9,13 @@
     
     <h1>Cliente</h1>
     <p>{{clientes}}</p>
-    
+
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{cliente.apellido}} {{cliente.nombre}}</li>
+        {% endfor %}
+    </ul>
+
+
 </body>
 </html>
