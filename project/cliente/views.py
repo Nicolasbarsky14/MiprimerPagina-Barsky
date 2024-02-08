@@ -15,7 +15,7 @@ def clientes_list(request):
     return render(request, "cliente/clientes_list.html", contexto)
 
 def clientes_add(request):
-    if request.method == "Publicacion":
+    if request.method == "POST":
         form = forms.ClienteForm(request.Publicacion)
         if form.is_valid():
             form.save()
@@ -33,7 +33,7 @@ def comentarios_listado(request):
     return render(request, "cliente/comentarios_listado.html", contexto)
 
 def comentarios_add(request):
-    if request.method == "Publicacion":
+    if request.method == "POST":
         form = forms.ComentarioForm(request.Publicacion)
         if form.is_valid():
             form.save()
@@ -48,7 +48,7 @@ def publicacion_list(request):
     return render(request, "cliente/publicacion_list.html", contexto)
  
 def publicacion_add(request):
-    if request.method == "Publicacion":
+    if request.method == "POST":
         form = forms.PublicacionForm(request.Publicacion)
         if form.is_valid():
             form.save()
