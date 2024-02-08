@@ -1,5 +1,6 @@
 {% extends "core/inicio.html" %}
- 
+{% load static %}
+
  {% block title %}
         Pagina Inicial 
  {% endblock title %}
@@ -11,5 +12,20 @@
     <button> <a href="{% url 'cliente:clientes'%}">Clientes</a></button>
     <button> <a href="{% url 'cliente:comentarios' %}">Comentarios </a> </button>  
     <button> <a href="{% url 'admin:index' %}"> Administracion </a> </button> 
- 
+   
+
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://images.pexels.com/photos/3650937/pexels-photo-3650937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="..." /></div>
+      <div class="col-lg-5">
+          <h1 class="font-weight-light">El Blog</h1>
+          <p>Bienvenido a tu blog comunitario. Ingresa notas y compartela con tus contactos.</p>
+          <a class="btn btn-success" href="?">Instagram</a>
+      </div>
+  </div>
+  <!-- Call to Action-->
+  <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+  </div>
+  
  {% endblock content %}
