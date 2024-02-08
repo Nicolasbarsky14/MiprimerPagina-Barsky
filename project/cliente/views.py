@@ -11,7 +11,7 @@ def Cliente(request):
 
 def clientes_list(request):
     clientes = models.Cliente.objects.all()
-    contexto = {"autores": clientes}
+    contexto = {"clientes": clientes}
     return render(request, "cliente/clientes_list.html", contexto)
 
 def clientes_add(request):
