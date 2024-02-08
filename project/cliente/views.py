@@ -55,5 +55,5 @@ def publicacion_add(request):
             return redirect("cliente:publicacion_listado")
     else:
         form = forms.PublicacionForm
-    return render(request, "cliente/publicacion_Add.html", {"form": form})
+    return render(request, "cliente/publicacion_add.html", {"form": form})
 
